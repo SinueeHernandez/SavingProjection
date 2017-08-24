@@ -1,0 +1,6 @@
+
+pirate:
+  currency: '£'
+  time:
+    formats:
+      short: 'arrrround %H"ish'
