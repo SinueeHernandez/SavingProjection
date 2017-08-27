@@ -18,9 +18,5 @@ module SavingProjection
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
     config.i18n.default_locale = :es
 
-    def default_url_options
-      { locale: I18n.locale }
-    end
-
   end
 end
