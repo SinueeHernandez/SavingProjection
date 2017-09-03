@@ -1,0 +1,6 @@
+
+es:
+  currency: '€'
+  time:
+    formats:
+      short: '%H:%m'

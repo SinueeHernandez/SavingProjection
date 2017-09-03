@@ -1,3 +1,5 @@
-<h1>Welcome</h1>
+<h1><%=t :hello_world %> </h1>
+<h2><%= flash[:notice] %></h2>
 <p>First day of development, by this day i only expect to get the structure of the app created. I have the BD design, Tomorrow i will start with the interface scketch, and create all the user story. I will to create a project on jira or similar to track the advance. </p>
 <p> Every progress is going to be publish here </p>
+<p> example for currency <%= "#{t('currency')}#{3+5}"%></p>
