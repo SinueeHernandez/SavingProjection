@@ -9,5 +9,12 @@ Rails.application.routes.draw do
   end 
  
   get '/:locale' => 'welcome#index' 
+
+  get '/:locale/signup', to: 'users#new', as: 'signup'
+  get '/:locale/login', to: 'sessions#new', as: 'login'
+  get '/:locale/logout', to: 'sessions#destroy', as: 'logout'
+  
+  resources :users
+  resources :sessions
   
 end
