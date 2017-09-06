@@ -4,10 +4,17 @@ Rails.application.routes.draw do
    root 'welcome#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  scope "(:locale)", locale: /en|nl/ do 
+  scope "(:locale)", locale: /es|nl/ do 
     resources :welcome 
   end 
  
   get '/:locale' => 'welcome#index' 
+
+  get '/:locale/signup', to: 'users#new', as: 'signup'
+  get '/:locale/login', to: 'sessions#new', as: 'login'
+  get '/:locale/logout', to: 'sessions#destroy', as: 'logout'
+  
+  resources :users
+  resources :sessions
   
 end
