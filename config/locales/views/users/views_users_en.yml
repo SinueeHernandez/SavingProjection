@@ -3,3 +3,6 @@ en:
   signUp: Sign Up 
   password: Password
   send: Sign Up
+  confirmation: Confirm Password
+  email: E-Mail
+  errorHeader: Form is invalid

@@ -1,6 +1,7 @@
 
 es: 
-  Welcome: Bienvenido
-  hello: Hola mundote
-  hello_world: hola mundo
-  hello_flash: ¡Hola flash!, quien quiera que seas
+  password: Contraseña
+  login: Iniciar sesión
+  loginHeader: Ingresar
+  email: Correo Electronico
+  errorHeader: Ocurrio un error

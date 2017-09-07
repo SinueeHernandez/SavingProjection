@@ -1,6 +1,7 @@
 
 pirate:
-  Welcome: ahoy
-  hello: ahoy pirats
-  hello_world: arrrww!
-  hello_flash: aha ha!
+  password: santo y seña
+  login: Ahoy!!
+  loginHeader: Entra si tienes el valor
+  email: yo soy...
+  errorHeader: tormentas y relampagos

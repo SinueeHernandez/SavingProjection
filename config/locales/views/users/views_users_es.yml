@@ -3,3 +3,6 @@ es:
   signUp: Registrarse
   password: Contraseña
   send: Enviar
+  confirmation: Confirmar Contraseña
+  email: Correo Electronico
+  errorHeader: Error en los campos
