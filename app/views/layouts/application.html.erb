@@ -9,17 +9,30 @@
   </head>
 
   <body>
-<div id="userControl">
-<% if current_user %>
-  Logged in as <%= current_user.email %>.
-  <%= link_to "Log Out", logout_path %>
-<% else %>
-  <%= link_to "Sign Up", signup_path %> or
-  <%= link_to "Log In", login_path %>
-<% end %>
-</div>
-
-  <span> add menu bar here </span>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Savings Projection</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul id="menu" class="nav navbar-nav">
+        <%@menu.each do |menu|%>
+          <li><%= link_to menu.name, menu.path %></li> 
+        <% end %>
+      </ul>
+      <ul id="userControl" class="nav navbar-nav navbar-right">
+        <% if current_user %>
+          <li><p class="navbar-text">Logged in as <%= current_user.email %>.</p></li>
+          <li><%= link_to "Log Out", logout_path %></li>
+        <% else %>
+          <li><span class="glyphicon glyphicon-user"> <%= link_to "Sign up", signup_path %></span></li>
+          <li><span class="glyphicon glyphicon-log-in"> <%= link_to "Log in", login_path %></span></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
+ 
     <%= yield %>
   </body>
 </html>
