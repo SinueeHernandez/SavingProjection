@@ -6,8 +6,17 @@ class ApplicationController < ActionController::Base
   
   def fetch_menu
     if @menu_bar.nil? then
-      @menu_bar = Menu.all()
+      @menu_bar = build_menu(0)
+      puts @menu_bar.count
     end
+  end
+
+  def build_menu (id)
+    menuElements = Menu.where("parent = :id", {id: id})
+    menuElements.each do |child|
+      child.childs = build_menu(child.id)
+    end    
+    menuElements
   end
   
   def set_locale

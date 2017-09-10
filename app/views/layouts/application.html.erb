@@ -17,7 +17,19 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul id="MenuBar" class="nav navbar-nav">
         <%@menu_bar.each do |menu|%>
+        <% if menu.childs.count > 0 then%>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= menu.name %>
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <% menu.childs.each do |child| %>
+                <li><%= link_to child.name, child.path %></li>
+                <% end %>
+              </ul>
+          </li>
+          <%else%>
           <li><%= link_to menu.name, menu.path %></li> 
+          <%end%>
         <% end %>
       </ul>
       <ul id="userControl" class="nav navbar-nav navbar-right">

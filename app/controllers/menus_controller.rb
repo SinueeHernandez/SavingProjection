@@ -4,6 +4,7 @@ class MenusController < ApplicationController
   # GET /menus
   # GET /menus.json
   def index
+    @notice = ''
     @menus = Menu.all
   end
 
