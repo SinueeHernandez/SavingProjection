@@ -1,13 +1,17 @@
+<div class="container">
 <h1><%=t :loginHeader %></h1>
+<form class="form-horizontal">
 
 <%= form_tag sessions_path do %>
-  <div class="field">
-    <%= label_tag t :email %><br />
+  <div class="form-group">
+    <%= label_tag t :email, class:"control-label col-sm-2" %><br />
     <%= text_field_tag :email, params[:email] %>
   </div>
-  <div class="field">
-    <%= label_tag t :password %><br />
+  <div class="form-group">
+    <%= label_tag t :password, class:"control-label col-sm-2" %><br />
     <%= password_field_tag :password %>
   </div>
-  <div class="actions"><%= submit_tag t :login %></div>
+  <%= submit_tag t :login, :class => "btn btn-default" %>
 <% end %>
+</form>
+</div>

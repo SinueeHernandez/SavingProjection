@@ -1,6 +1,10 @@
+<div class="container">
 <h1>Editing Menu</h1>
+<form class="form-horizontal">
 
 <%= render 'form', menu: @menu %>
-
-<%= link_to 'Show', @menu %> |
-<%= link_to 'Back', menus_path %>
+<br>
+<%= link_to '<button type="button" class="btn btn-primary">Show</button>'.html_safe, @menu %> |
+<%= link_to '<button type="button" class="btn btn-primary">Back</button>'.html_safe, menus_path %>
+</form>
+</div>

@@ -5,7 +5,9 @@ class ApplicationController < ActionController::Base
   
   
   def fetch_menu
-      @menu = Menu.all()
+    if @menu_bar.nil? then
+      @menu_bar = Menu.all()
+    end
   end
   
   def set_locale
