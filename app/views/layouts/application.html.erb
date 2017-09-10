@@ -19,7 +19,7 @@
         <%@menu_bar.each do |menu|%>
         <% if menu.childs.count > 0 then%>
           <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= menu.name %>
+            <a class="dropdown-toggle" data-toggle="dropdown" href=<%= menu.path%>><%= menu.name %>
               <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <% menu.childs.each do |child| %>
